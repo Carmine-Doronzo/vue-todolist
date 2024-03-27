@@ -7,34 +7,34 @@ const { createApp } = Vue
         inputDo:'',
         todos :
         [
-            // {
-            //     text:'fai la spesa',
-            //     done: true
-            // },
-            // {
-            //     text:'mangia',
-            //     done: false
-            // },
-            // {
-            //     text:'studia',
-            //     done: true
-            // },
-            // {
-            //     text:'leggi la documentazione',
-            //     done: false
-            // },
-            // {
-            //     text:'allenati',
-            //     done: true
-            // },
-            // {
-            //     text:'non arrabbiarti',
-            //     done: false
-            // },
-            // {
-            //     text:'riposati',
-            //     done: true
-            // },
+            {
+                text:'fai la spesa',
+                done: true
+            },
+            {
+                text:'mangia',
+                done: false
+            },
+            {
+                text:'studia',
+                done: true
+            },
+            {
+                text:'leggi la documentazione',
+                done: false
+            },
+            {
+                text:'allenati',
+                done: true
+            },
+            {
+                text:'non arrabbiarti',
+                done: false
+            },
+            {
+                text:'riposati',
+                done: true
+            },
         ]
         
       }
