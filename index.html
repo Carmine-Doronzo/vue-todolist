@@ -19,8 +19,9 @@
                     <input type="text" placeholder="aggiungi una cosa da fare">
                 </div>
                 <ul class="todo-list">
-                    <li class="todo-item" v-for="item,i in todos" :class="todos[i].done === true ? 'text-decoration' : '' ">
-                        {{item.text}}
+                    <li class="todo-item" v-for="item,i in todos" >
+                        <span :class="todos[i].done === true ? 'text-decoration' : '' ">{{item.text}}</span> 
+                        <span @click="remove(item,i)">&Cross;</span>
                     </li>
                 </ul>
             </div>
