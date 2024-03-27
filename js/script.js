@@ -41,7 +41,8 @@ const { createApp } = Vue
 
     methods:{
         remove(item,i){
-            this.todos.splice(i,1)
+            item = this.todos
+            item.splice(i,1)
         },
 
         addDo(){
@@ -51,7 +52,7 @@ const { createApp } = Vue
         },
         
         iDo(item){
-            if(this.todos.done === false){
+            if(item.done === false){
             item.done = true
             }else{
                 item.done = false
