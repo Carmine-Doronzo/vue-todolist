@@ -19,12 +19,18 @@
                     <input @keydown.enter="addDo()" type="text" placeholder="aggiungi una cosa da fare" v-model.trim="inputDo">
                     <input type="button" value="Aggiungi" @click="addDo">
                 </div>
-                <ul class="todo-list">
+                <ul v-if="todos.length !== 0" class="todo-list">
+                    
                     <li class="todo-item" v-for="(item,i) in todos"  >
                         <span @click="iDo(item)" :class="item.done === true ? 'text-decoration' : '' ">{{item.text}}</span> 
                         <span @click="remove(item,i)">&Cross;</span>
                     </li>
+
+                    
+                    
                 </ul>
+                <p  v-else>sicuro che non hai nnt da fare?</p>
+                <p class="alert"></p>
             </div>
         </main>
     </div>
