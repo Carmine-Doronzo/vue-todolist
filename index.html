@@ -16,11 +16,12 @@
         <main>
             <div class="container">
                 <div class="inputDo">
-                    <input type="text" placeholder="aggiungi una cosa da fare">
+                    <input @keydown.enter="addDo()" type="text" placeholder="aggiungi una cosa da fare" v-model.trim="inputDo">
+                    <input type="button" value="Aggiungi" @click="addDo">
                 </div>
                 <ul class="todo-list">
                     <li class="todo-item" v-for="item,i in todos" >
-                        <span :class="todos[i].done === true ? 'text-decoration' : '' ">{{item.text}}</span> 
+                        <span @click="iDo(item)" :class="todos[i].done === true ? 'text-decoration' : '' ">{{item.text}}</span> 
                         <span @click="remove(item,i)">&Cross;</span>
                     </li>
                 </ul>

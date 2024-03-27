@@ -4,6 +4,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        inputDo:'',
         todos :
         [
             {
@@ -41,7 +42,23 @@ const { createApp } = Vue
     methods:{
         remove(item,i){
             this.todos.splice(i,1)
+        },
+
+        addDo(){
+            this.todos.push({text:this.inputDo,done:false})
+            
+            this.inputDo = ''
+        },
+        
+        iDo(item){
+            if(this.todos.done === false){
+            item.done = true
+            }else{
+                item.done = false
+            }
+            
         }
+
 
     }
   }).mount('#app')
