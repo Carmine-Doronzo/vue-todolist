@@ -1,0 +1,1 @@
+Esercizio in cui utilizzando Vue.js da cdn creo una lista di cose da fare che può essere modificata aggiungendo delle task potendo barrare quelle fatte e eliminare quelle non più necessarie.
